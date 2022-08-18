@@ -15,7 +15,6 @@ public class CounterListener : MonoBehaviour
     private void OnEnable()
     {
         //Subscribe to events
-        //CounterAnnouncers.OnStartEvent += IncreaseCount; <- original
         TankGameEvents.OnRoundResetEvent += IncreaseCount;
 
     }
@@ -23,7 +22,6 @@ public class CounterListener : MonoBehaviour
     private void OnDisable()
     {
         //Unsubscribe to events
-        //CounterAnnouncers.OnStartEvent -= IncreaseCount; <- original
         TankGameEvents.OnRoundResetEvent -= IncreaseCount;  
 
     }
@@ -39,6 +37,6 @@ public class CounterListener : MonoBehaviour
         //Counter has been increased by 1 "(++)" and updates the Ui Text
 
         counter++;
-        counterUiText.text = "Number of Game Starts: " + counter;
+        counterUiText.text = "Round: " + counter;
     }
 }

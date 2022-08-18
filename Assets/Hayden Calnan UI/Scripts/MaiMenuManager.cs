@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MaiMenuManager : MonoBehaviour
 {
-    //This script will allow bring functionality to ahndle the showing of the main menu and credits menu\
+    //This script will allow bring functionality to handle the showing of the main menu and credits menu
 
     //Needs to "Deactivate" main menu
     //Code Reference: gameobject.SetActive(False)
@@ -43,6 +43,7 @@ public class MaiMenuManager : MonoBehaviour
         //Quit the game
 
         Debug.Log("Player has quit the game");
+        Application.Quit();
         
     }
 
